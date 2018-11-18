@@ -19,14 +19,14 @@ simulator better use gdb versions > 5.0.
 * gdb's simulator is not able to correctly emulate memory areas esp. shadowing
 and non-consecutive memory. I.e. access to memory areas besides area 0 will 
 (bogusly) generate SIGBUS exceptions.  This includes access to area 5 
-(On-chip peripherials) and prevents simulation of configuration and access
-to on-chip peripherials.
+(On-chip peripherals) and prevents simulation of configuration and access
+to on-chip peripherals.
 
 * Due to limitations of the simulator you will only be able to run
 applications which do not try to access any SH control registers.
 
 Currently, this excludes all applications, which apply timers and serial 
-devices, i.e. almost any real world application.
+devices, i.e. almost any real-world application.
 
 * This BSP supports 3 different console devices (cf. configure --help):
 - trap34, an interface base on gdb's trap34 emulation. Known to work with
